@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 18:33:20 by cmiran            #+#    #+#             */
-/*   Updated: 2017/11/29 17:25:54 by cmiran           ###   ########.fr       */
+/*   Updated: 2017/11/30 19:36:45 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,51 @@
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*elem;
-	t_list	*tmp;
-	t_list	*new;
+	t_list		*new;
+	t_list		*list;
 
-	if (!lst || !f)
+	if (!lst)
 		return (NULL);
-	elem = f(lst);
-	if (!(tmp = ft_lstnew(elem->content, elem->content_size)))
-		return (NULL);
-	new = tmp;
-	lst = lst->next;
-	while (lst)
+	list = f(lst);
+	new = list;
+	while (lst->next)
 	{
-		elem = f(lst);
-		if (!(tmp->next = ft_lstnew(elem->content, elem->content_size)))
-			return (NULL);
-		tmp = tmp->next;
 		lst = lst->next;
+		if (!(list->next = f(lst)))
+		{
+			free(list->next);
+			return (NULL);
+		}
+		list = list->next;
 	}
-	free(elem);
 	return (new);
 }
+
+/*
+** t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+** {
+**	t_list	*elem;
+**	t_list	*tmp;
+**	t_list	*new;
+**
+**	if (!lst || !f)
+**		return (NULL);
+**	elem = f(lst);
+**	if (!(tmp = ft_lstnew(elem->content, elem->content_size)))
+**		return (NULL);
+**	new = tmp;
+**	lst = lst->next;
+**	while (lst)
+**	{
+**		elem = f(lst);
+**		if (!(tmp->next = ft_lstnew(elem->content, elem->content_size)))
+**			return (NULL);
+**		tmp = tmp->next;
+**		lst = lst->next;
+**	}
+**	free(elem);
+**	return (new);
+** }
+*/

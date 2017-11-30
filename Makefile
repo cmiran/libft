@@ -6,10 +6,12 @@
 #    By: cmiran <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 17:19:22 by cmiran            #+#    #+#              #
-#    Updated: 2017/11/30 18:09:17 by cmiran           ###   ########.fr        #
+#    Updated: 2017/11/30 19:47:31 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC=gcc
+CFLAGS= -Wall -Werror -Wextra
 NAME = libft.a
 SRC = ft_atoi.c\
       ft_bzero.c\
@@ -76,9 +78,9 @@ OBJ = $(SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	gcc -c -Wall -Wextra -Werror $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc -c $(CFLAGS) $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
 	rm -f $(OBJ)
