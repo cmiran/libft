@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2017/11/29 17:14:04 by cmiran           ###   ########.fr       */
+/*   Updated: 2017/11/30 20:37:27 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void			ft_putstr(const char *s);
 void			ft_putstr_fd(const char *s, int fd);
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strchr(const char *s, int c);
+size_t			ft_strclen(const char *s, char c);
 void			ft_strclr(char *s);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dest, const char *src);

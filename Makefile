@@ -6,7 +6,7 @@
 #    By: cmiran <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 17:19:22 by cmiran            #+#    #+#              #
-#    Updated: 2017/11/30 19:47:31 by cmiran           ###   ########.fr        #
+#    Updated: 2017/11/30 20:30:45 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC = ft_atoi.c\
       ft_putstr_fd.c\
       ft_strcat.c\
       ft_strchr.c\
+      ft_strclen.c\
       ft_strclr.c\
       ft_strcmp.c\
       ft_strcpy.c\
