@@ -6,7 +6,7 @@
 #    By: cmiran <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 17:19:22 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/03 14:55:03 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/03 14:57:29 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,9 +86,9 @@ $(NAME) : $(OBJ)
 	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
