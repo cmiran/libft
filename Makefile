@@ -6,7 +6,7 @@
 #    By: cmiran <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 17:19:22 by cmiran            #+#    #+#              #
-#    Updated: 2017/11/30 22:40:04 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/03 14:55:03 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC = ft_atoi.c\
       ft_isascii.c\
       ft_isdigit.c\
       ft_isprint.c\
+      ft_iswhitespace.c\
       ft_itoa.c\
       ft_lstadd.c\
       ft_lstdel.c\
