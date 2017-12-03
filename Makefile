@@ -6,12 +6,16 @@
 #    By: cmiran <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 17:19:22 by cmiran            #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2017/12/03 19:33:43 by cmiran           ###   ########.fr        #
+=======
+#    Updated: 2017/12/03 14:57:29 by cmiran           ###   ########.fr        #
+>>>>>>> 169ef0c59d7af520fe75c3e0e6008c7bdf033ed5
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CC=gcc
+CFLAGS= -Wall -Werror -Wextra
 NAME = libft.a
 SRC = ft_atoi.c\
       ft_bzero.c\
@@ -20,6 +24,7 @@ SRC = ft_atoi.c\
       ft_isascii.c\
       ft_isdigit.c\
       ft_isprint.c\
+      ft_iswhitespace.c\
       ft_itoa.c\
       ft_lstadd.c\
       ft_lstdel.c\
@@ -85,9 +90,9 @@ $(NAME) : $(OBJ)
 	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
