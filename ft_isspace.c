@@ -6,13 +6,13 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 20:40:53 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/03 20:41:04 by cmiran           ###   ########.fr       */
+/*   Updated: 2017/12/03 20:48:45 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_iswhitespace(int c)
+int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\t' || c == '\n'
 			|| c == '\v' || c == '\r' || c == '\f')
