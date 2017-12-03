@@ -6,12 +6,12 @@
 #    By: cmiran <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 17:19:22 by cmiran            #+#    #+#              #
-#    Updated: 2017/11/30 22:40:04 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/03 19:33:43 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC=gcc
-CFLAGS= -Wall -Werror -Wextra
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 SRC = ft_atoi.c\
       ft_bzero.c\
