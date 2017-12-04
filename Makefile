@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/03 20:42:17 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/04 10:33:38 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ SRC = ft_atoi.c\
       ft_strtrim.c\
       ft_tolower.c\
       ft_toupper.c
-OBJ = $(SRC:%.c=%.o)
+OBJ = $(SRC:.c=.o)
 
 .PHONY: all clean fclean re
 
