@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memfree.c                                       :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 22:33:39 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 17:12:59 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 17:29:48 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 18:56:46 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memfree(void **tab)
+char	*ft_strcapitalize(char *str)
 {
-	if (!tab)
-		return ;
-	while (*tab)
+	size_t	i;
+
+	if (!str)
+		return (NULL);
+	i = 0;
+	ft_strlowcase(str);
+	if (ft_islower(str[i]))
+		str[i] -= 32;
+	while (str[i])
 	{
-		free(*tab);
-		tab++;
+		if (((str[i] >= 0 && str[i] <= '/')
+			|| (str[i] >= ':' && str[i] <= '@')
+				|| (str[i] >= '[' && str[i] <= '`')
+					|| (str[i] >= '{' && str[i] <= '~'))
+						&& ft_islower(str[i + 1]))
+			str[i + 1] -= 32;
+		i++;
 	}
-	free(tab);
+	return (str);
 }

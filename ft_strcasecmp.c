@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memfree.c                                       :+:      :+:    :+:   */
+/*   ft_strcasecmp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 22:33:39 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 17:12:59 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 19:08:03 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 19:20:28 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memfree(void **tab)
+int	ft_strcasecmp(const char *s1, const char *s2)
 {
-	if (!tab)
-		return ;
-	while (*tab)
+	unsigned char	ss1;
+	unsigned char	ss2;
+
+	ss1 = 1;
+	ss2 = 1;
+	while (ss1 == ss2 && ss1)
 	{
-		free(*tab);
-		tab++;
+		ss1 = ft_tolower(*s1++);
+		ss2 = ft_tolower(*s2++);
 	}
-	free(tab);
+	return (ss1 - ss2);
 }

@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memfree.c                                       :+:      :+:    :+:   */
+/*   ft_strcasestr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 22:33:39 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 17:12:59 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 19:23:11 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 19:48:12 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memfree(void **tab)
+char	*ft_strcasestr(const char *haystack, const char *needle)
 {
-	if (!tab)
-		return ;
-	while (*tab)
+	size_t	i;
+	size_t	j;
+
+	if (!*needle)
+		return ((char *)haystack);
+	i = 0;
+	while (haystack[i])
 	{
-		free(*tab);
-		tab++;
+		j = 0;
+		while (ft_tolower(haystack[i + j]) == ft_tolower(needle[j]))
+		{
+			if (needle[j + 1] == '\0')
+				return ((char *)haystack + i);
+			j++;
+		}
+		i++;
 	}
-	free(tab);
+	return (NULL);
 }

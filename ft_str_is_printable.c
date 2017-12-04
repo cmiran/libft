@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memfree.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 22:33:39 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 17:12:59 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 17:13:32 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 17:14:44 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memfree(void **tab)
+int	ft_str_is_printable(char *str)
 {
-	if (!tab)
-		return ;
-	while (*tab)
+	while (*str)
 	{
-		free(*tab);
-		tab++;
+		if (!(*str >= ' ' && *str <= '~'))
+			return (0);
+		str++;
 	}
-	free(tab);
+	return (1);
 }

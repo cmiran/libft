@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memfree.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 22:33:39 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 17:12:59 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 17:23:08 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 17:56:10 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memfree(void **tab)
+char	*ft_strupcase(char *str)
 {
-	if (!tab)
-		return ;
-	while (*tab)
+	size_t	i;
+
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (str[i])
 	{
-		free(*tab);
-		tab++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
 	}
-	free(tab);
+	return (str);
 }

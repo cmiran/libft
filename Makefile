@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/04 17:01:57 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/04 19:31:09 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,9 @@ SRC = ft_atoi.c\
       ft_isalpha.c\
       ft_isascii.c\
       ft_isblank.c\
+      ft_iscntrl.c\
       ft_isdigit.c\
+      ft_isgraph.c\
       ft_islower.c\
       ft_islowhexa.c\
       ft_isprint.c\
@@ -54,7 +56,11 @@ SRC = ft_atoi.c\
       ft_str_is_alpha.c\
       ft_str_is_lowercase.c\
       ft_str_is_numeric.c\
+      ft_str_is_printable.c\
       ft_str_is_uppercase.c\
+      ft_strcapitalize.c\
+      ft_strcasecmp.c\
+      ft_strcasestr.c\
       ft_strcat.c\
       ft_strchr.c\
       ft_strclen.c\
@@ -68,12 +74,16 @@ SRC = ft_atoi.c\
       ft_striteri.c\
       ft_strjoin.c\
       ft_strlcat.c\
+      ft_strlcpy.c\
       ft_strlen.c\
+      ft_strlowcase.c\
       ft_strmap.c\
       ft_strmapi.c\
+      ft_strncasecmp.c\
       ft_strncat.c\
       ft_strncmp.c\
       ft_strncpy.c\
+      ft_strndup.c\
       ft_strnequ.c\
       ft_strnew.c\
       ft_strnstr.c\
@@ -82,6 +92,7 @@ SRC = ft_atoi.c\
       ft_strstr.c\
       ft_strsub.c\
       ft_strtrim.c\
+      ft_strupcase.c\
       ft_tolower.c\
       ft_toupper.c
 OBJ = $(SRC:.c=.o)
