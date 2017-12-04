@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/04 10:33:38 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/04 17:01:57 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,15 @@ SRC = ft_atoi.c\
       ft_isalnum.c\
       ft_isalpha.c\
       ft_isascii.c\
+      ft_isblank.c\
       ft_isdigit.c\
+      ft_islower.c\
+      ft_islowhexa.c\
       ft_isprint.c\
       ft_isspace.c\
+      ft_isupper.c\
+      ft_isupphexa.c\
+      ft_isxdigit.c\
       ft_itoa.c\
       ft_lstadd.c\
       ft_lstdel.c\
@@ -45,6 +51,10 @@ SRC = ft_atoi.c\
       ft_putnbr_fd.c\
       ft_putstr.c\
       ft_putstr_fd.c\
+      ft_str_is_alpha.c\
+      ft_str_is_lowercase.c\
+      ft_str_is_numeric.c\
+      ft_str_is_uppercase.c\
       ft_strcat.c\
       ft_strchr.c\
       ft_strclen.c\

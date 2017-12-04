@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 21:01:45 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 15:47:17 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 16:38:15 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 17:03:53 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_str_is_numeric(char *str)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	while (*str)
+	{
+		if (!(*str >= '0' && *str <= '9'))
+			return (0);
+		str++;
+	}
+	return (1);
 }

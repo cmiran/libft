@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/03 20:41:47 by cmiran           ###   ########.fr       */
+/*   Updated: 2017/12/04 17:01:44 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,15 @@ void			ft_bzero(void *s, size_t n);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isascii(int c);
+int				ft_isblank(int c);
 int				ft_isdigit(int c);
+int				ft_islower(int c);
+int				ft_islowhexa(int c);
 int				ft_isprint(int c);
 int				ft_isspace(int c);
+int				ft_isupper(int c);
+int				ft_isupphexa(int c);
+int				ft_isxdigit(int c);
 char			*ft_itoa(int n);
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -57,6 +63,10 @@ void			ft_putnbr(int n);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr(const char *s);
 void			ft_putstr_fd(const char *s, int fd);
+int				ft_str_is_alpha(char *str);
+int				ft_str_is_lowercase(char *str);
+int				ft_str_is_numeric(char *str);
+int				ft_str_is_uppercase(char *str);
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strchr(const char *s, int c);
 size_t			ft_strclen(const char *s, char c);

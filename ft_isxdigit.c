@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isxdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 21:01:45 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/04 15:47:17 by cmiran           ###   ########.fr       */
+/*   Created: 2017/12/04 15:54:15 by cmiran            #+#    #+#             */
+/*   Updated: 2017/12/04 15:55:13 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isxdigit(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	return (ft_isdigit(c) || ft_islowhexa(c) || ft_isupphexa(c));
 }
