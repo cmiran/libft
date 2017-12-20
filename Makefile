@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/04 19:31:09 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/20 14:12:33 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ SRC = ft_atoi.c\
       ft_memcmp.c\
       ft_memcpy.c\
       ft_memdel.c\
-      ft_memfree.c\
       ft_memmove.c\
       ft_memset.c\
       ft_putchar.c\
@@ -93,6 +92,7 @@ SRC = ft_atoi.c\
       ft_strsub.c\
       ft_strtrim.c\
       ft_strupcase.c\
+      ft_tabfree.c\
       ft_tolower.c\
       ft_toupper.c
 OBJ = $(SRC:.c=.o)
