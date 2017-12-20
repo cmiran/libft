@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 20:33:40 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/20 14:21:49 by cmiran           ###   ########.fr       */
+/*   Updated: 2017/12/20 19:37:30 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ char			**ft_strsplit(char const *s, char c)
 		if (s[i] != c && s[i])
 			if (!(tab[j++] = ft_strpullr(s, c, &i)))
 			{
-				ft_tabfree((void **)tab);
+				ft_freetab(tab);
 				return (NULL);
 			}
 	}

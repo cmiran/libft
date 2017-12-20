@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/20 14:12:33 by cmiran           ###   ########.fr        #
+#    Updated: 2017/12/20 19:36:28 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 SRC = ft_atoi.c\
       ft_bzero.c\
+      ft_freetab.c\
       ft_isalnum.c\
       ft_isalpha.c\
       ft_isascii.c\
@@ -52,6 +53,8 @@ SRC = ft_atoi.c\
       ft_putnbr_fd.c\
       ft_putstr.c\
       ft_putstr_fd.c\
+      ft_puttab.c\
+      ft_puttab_fd.c\
       ft_str_is_alpha.c\
       ft_str_is_lowercase.c\
       ft_str_is_numeric.c\
@@ -65,6 +68,7 @@ SRC = ft_atoi.c\
       ft_strclen.c\
       ft_strclr.c\
       ft_strcmp.c\
+      ft_strcnew.c\
       ft_strcpy.c\
       ft_strdel.c\
       ft_strdup.c\
@@ -92,7 +96,6 @@ SRC = ft_atoi.c\
       ft_strsub.c\
       ft_strtrim.c\
       ft_strupcase.c\
-      ft_tabfree.c\
       ft_tolower.c\
       ft_toupper.c
 OBJ = $(SRC:.c=.o)
