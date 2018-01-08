@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:33:39 by cmiran            #+#    #+#             */
-/*   Updated: 2017/12/20 19:37:47 by cmiran           ###   ########.fr       */
+/*   Updated: 2017/12/24 18:31:16 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_freetab(char **tab)
 	if (!tab)
 		return ;
 	while (*tab)
-		free(*tab++);
-	free(tab);
+		ft_memdel((void **)*tab++);
+	ft_memdel((void **)tab);
 }
