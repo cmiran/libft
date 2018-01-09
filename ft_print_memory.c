@@ -6,7 +6,7 @@
 /*   By: jates- <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:15:37 by jates-            #+#    #+#             */
-/*   Updated: 2018/01/09 19:11:51 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/01/09 19:16:10 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void		ft_process(void const *ptr, unsigned char const *ligne, \
 	write(1, ":", 1);
 	while (k++ < 40)
 	{
-		if (i++ + 1 < (int) nb)
+		if (i++ + 1 < (int)nb)
 		{
 			if (i % 2 == 0)
 			{
@@ -80,11 +80,11 @@ void			*ft_print_memory(void const *addr, size_t size)
 
 	tata = (unsigned char const *)addr;
 	if (!tata)
-		{
-			ft_putptr_base_hex((unsigned int)((void const*)tata - BLANK), 8);
-			write(1, "\n", 1);
-			return (0);
-		}
+	{
+		ft_putptr_base_hex((unsigned int)((void const*)tata - BLANK), 8);
+		write(1, "\n", 1);
+		return (0);
+	}
 	while ((int)size > 0)
 	{
 		if (!((int)size - 16 < 0))
