@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2017/12/20 19:36:28 by cmiran           ###   ########.fr        #
+#    Updated: 2018/01/09 14:31:46 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC = ft_atoi.c\
       ft_memdel.c\
       ft_memmove.c\
       ft_memset.c\
+      ft_print_memory.c\
       ft_putchar.c\
       ft_putchar_fd.c\
       ft_putendl.c\
