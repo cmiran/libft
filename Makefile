@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/01/09 14:31:46 by cmiran           ###   ########.fr        #
+#    Updated: 2018/01/11 01:26:18 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 SRC = ft_atoi.c\
       ft_bzero.c\
+      ft_freentab.c\
       ft_freetab.c\
       ft_isalnum.c\
       ft_isalpha.c\
