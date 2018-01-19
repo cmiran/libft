@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/01/11 01:26:18 by cmiran           ###   ########.fr        #
+#    Updated: 2018/01/19 04:15:22 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRC = ft_atoi.c\
       ft_strcasestr.c\
       ft_strcat.c\
       ft_strchr.c\
+      ft_strcjoin.c\
       ft_strclen.c\
       ft_strclr.c\
       ft_strcmp.c\
