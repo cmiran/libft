@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 17:37:38 by cmiran            #+#    #+#             */
-/*   Updated: 2018/01/21 20:22:18 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/01/22 17:47:53 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@
 */
 
 #include "libft.h"
+
 /*
 ** void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 ** {
 ** 	t_list	*list;
 ** 	t_list	*next;
-** 
+**
 ** 	if (!alst)
 ** 		return ;
 ** 	list = *alst;

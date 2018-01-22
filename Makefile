@@ -6,13 +6,15 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/01/19 04:15:22 by cmiran           ###   ########.fr        #
+#    Updated: 2018/01/22 17:45:47 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
+
 NAME = libft.a
+
 SRC = ft_atoi.c\
       ft_bzero.c\
       ft_freentab.c\
@@ -101,16 +103,18 @@ SRC = ft_atoi.c\
       ft_strupcase.c\
       ft_tolower.c\
       ft_toupper.c
-OBJ = $(SRC:.c=.o)
 
-.PHONY: all clean fclean re
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME) : $(OBJ)
 	@gcc -c $(CFLAGS) $(SRC)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+	@ar rc $@ $^
+	@ranlib $@
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
 	@rm -f $(OBJ)
@@ -119,3 +123,5 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

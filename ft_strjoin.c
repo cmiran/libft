@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 18:45:58 by cmiran            #+#    #+#             */
-/*   Updated: 2018/01/21 19:56:18 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/01/22 14:34:22 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 }
 
 /*
- *
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	size_t	i;
-	char	*str;
-
+** char	*ft_strjoin(char const *s1, char const *s2)
+** {
+**	size_t	i;
+**	char	*str;
+**
 **	if (s1 || !s2)
 **		return (NULL);
 **	if (!(str = (char *)malloc(sizeof(*str)
