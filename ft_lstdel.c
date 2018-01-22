@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 17:37:38 by cmiran            #+#    #+#             */
-/*   Updated: 2017/11/29 17:03:06 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/01/21 20:22:18 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,29 +19,28 @@
 */
 
 #include "libft.h"
-
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
-{
-	t_list	*list;
-	t_list	*next;
-
-	if (!alst)
-		return ;
-	list = *alst;
-	while (list)
-	{
-		next = list->next;
-		ft_lstdelone(&list, del);
-		list = next;
-	}
-	*alst = NULL;
-}
-
 /*
 ** void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 ** {
-**		if ((*alst)->next)
-**			ft_lstdel(&(*alst)->next, del);
-**		ft_lstdelone(alst, del);
+** 	t_list	*list;
+** 	t_list	*next;
+** 
+** 	if (!alst)
+** 		return ;
+** 	list = *alst;
+** 	while (list)
+** 	{
+** 		next = list->next;
+** 		ft_lstdelone(&list, del);
+** 		list = next;
+** 	}
+** 	*alst = NULL;
 ** }
 */
+
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
+	if ((*alst)->next)
+		ft_lstdel(&(*alst)->next, del);
+	ft_lstdelone(alst, del);
+}
