@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 18:45:58 by cmiran            #+#    #+#             */
-/*   Updated: 2018/01/26 18:43:14 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/01/29 17:15:29 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	char	*str;
 
-	if (!s2)
+	if (!s1 || !s2)
 		return (NULL);
 	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
 		return (NULL);
