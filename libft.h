@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2018/01/26 16:43:44 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/03/16 11:22:59 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 # define LIBFT_H
 
 # include <ctype.h>
+# include <fcntl.h>
+# include <limits.h>
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
+
+# define BUFF_SIZE 42
 
 typedef struct	s_list
 {
@@ -25,6 +29,7 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
 void			ft_freentab(char ***tab, int n);
@@ -116,5 +121,6 @@ char			*ft_strtrim(char const *s);
 char			*ft_strupcase(char *str);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+int				get_next_line(int fd, char **line);
 
 #endif

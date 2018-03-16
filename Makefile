@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/01/26 17:02:13 by cmiran           ###   ########.fr        #
+#    Updated: 2018/03/16 11:23:27 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,7 +103,8 @@ SRC = ft_atoi.c\
       ft_strtrim.c\
       ft_strupcase.c\
       ft_tolower.c\
-      ft_toupper.c
+      ft_toupper.c\
+      get_next_line.c
 
 OBJ = $(SRC:.c=.o)
 
