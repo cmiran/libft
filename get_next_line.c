@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2018/03/16 11:24:06 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/05/13 17:56:26 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	get_next_line(const int fd, char **line)
 {
 	static char	*list[OPEN_MAX];
 	int			ret;
-	char		buf[BUFF_SIZE];
+	char		buf[BUFF_SIZE + 1];
 	char		*tmp;
 
 	if (BUFF_SIZE < 1 || fd < 0 || line == NULL || read(fd, NULL, 0))
