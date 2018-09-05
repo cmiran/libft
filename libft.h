@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 14:38:56 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/05 16:41:44 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ int				ft_strequ(char const *s1, char const *s2);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strjoin(char const *s1, char const *s2);
-char			*ft_strjoinfree(char const *s1, char const *s2);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *s);
@@ -118,7 +117,6 @@ char			**ft_strsplit(char const *s, char c);
 char			*ft_strrev(char *str);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
-char			*ft_strsubfree(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s);
 char			*ft_strupcase(char *str);
 int				ft_tolower(int c);
