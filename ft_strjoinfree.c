@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 14:25:58 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 14:40:47 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/05 14:45:20 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char    *ft_strjoinfree(char const *s1, char const *s2)
 		str[i++] = *s1++;
 	while (*s2)
 		str[i++] = *s2++;
-	ft_strdel(&s1);
-	ft_strdel(&s2);
+	ft_strdel((char **)&s1);
+	ft_strdel((char **)&s2);
 	return (str);
 }
