@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 16:41:44 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/05 19:35:58 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct	s_list
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
+char			*ft_dupcstr(const char *s1, char c);
 void			ft_freentab(char ***tab, int n);
 void			ft_freetab(char ***tab);
 int				ft_isalnum(int c);
