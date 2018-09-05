@@ -6,11 +6,11 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 14:25:58 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 14:27:46 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/05 14:40:47 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-nclude "libft.h"
+#include "libft.h"
 
 char    *ft_strjoinfree(char const *s1, char const *s2)
 {
