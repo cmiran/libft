@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 14:23:11 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 15:39:06 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/05 15:40:36 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strsubfree(char const *s, unsigned int start, size_t len)
 		sstr[i++] = s[start++];
 	sstr[i] = '\0';
 	free((void *)s);
-	*s = NULL;
+	(char *)*s = NULL;
 	return (sstr);
 }
