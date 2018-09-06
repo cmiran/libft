@@ -6,13 +6,13 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 15:07:39 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/06 19:13:51 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/06 20:07:57 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	value_of(char c)
+static int	value_of(char c)
 {
 	if (ft_isdigit(c))
 		return (c - '0');
@@ -23,9 +23,9 @@ int	value_of(char c)
 	return (0);
 }
 
-int	ft_atoi_base(const char *str, int base)
+int		ft_atoi_base(const char *str, int base)
 {
-	int	nb;
+	long	nb;
 	int	sign;
 
 	if (!str || base < 2 || base > 36)
@@ -45,16 +45,5 @@ int	ft_atoi_base(const char *str, int base)
 		nb = nb * base + value_of(*str);
 		str++;
 	}
-	return (nb * sign);
-}
-
-int	main(int argc, char **argv)
-{
-	int	base;
-
-	base = 16;
-	if (argc)
-		;
-	printf("%i\n", ft_atoi_base(argv[1], base));
-	return (0);
+	return ((int)nb * sign);
 }
