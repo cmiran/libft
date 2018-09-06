@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 19:35:58 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/06 18:48:21 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ typedef struct	s_list
 }				t_list;
 
 int				ft_atoi(const char *str);
+int				ft_atoi_base(const char *str, int base);
+//int				ft_atoi_base(const char *str, const char *base);
 void			ft_bzero(void *s, size_t n);
 char			*ft_dupcstr(const char *s1, char c);
 void			ft_freentab(char ***tab, int n);
@@ -41,6 +43,7 @@ int				ft_isascii(int c);
 int				ft_isblank(int c);
 int				ft_iscntrl(int c);
 int				ft_isdigit(int c);
+int				ft_isdigit_base(int c, int base);
 int				ft_isgraph(int c);
 int				ft_islower(int c);
 int				ft_islowhexa(int c);

@@ -6,13 +6,13 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2018/05/13 17:56:26 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/09/05 23:00:01 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_fd(char **list, const int *fd, char **tmp)
+static int	get_fd(char **list, const int *fd, char **tmp)
 {
 	if (!(list[*fd]) && (!(list[*fd] = ft_strnew(BUFF_SIZE))))
 		return (-1);

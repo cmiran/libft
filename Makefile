@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/09/05 19:35:18 by cmiran           ###   ########.fr        #
+#    Updated: 2018/09/06 18:55:50 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
 
 SRC = ft_atoi.c\
+      ft_atoi_base.c\
       ft_bzero.c\
       ft_dupcstr.c\
       ft_freentab.c\
@@ -26,6 +27,7 @@ SRC = ft_atoi.c\
       ft_isblank.c\
       ft_iscntrl.c\
       ft_isdigit.c\
+      ft_isdigit_base.c\
       ft_isgraph.c\
       ft_islower.c\
       ft_islowhexa.c\
