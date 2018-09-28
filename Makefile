@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/09/06 18:55:50 by cmiran           ###   ########.fr        #
+#    Updated: 2018/09/28 23:17:22 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRC = ft_atoi.c\
       ft_isupphexa.c\
       ft_isxdigit.c\
       ft_itoa.c\
+      ft_itoa_base.c\
       ft_lstadd.c\
       ft_lstdel.c\
       ft_lstdelone.c\
@@ -114,18 +115,18 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	@gcc -c $(CFLAGS) $(SRC)
-	@ar rc $@ $^
-	@ranlib $@
+	gcc -c $(CFLAGS) $(SRC)
+	ar rc $@ $^
+	ranlib $@
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(OBJ)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
