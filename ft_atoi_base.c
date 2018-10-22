@@ -6,13 +6,13 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 15:07:39 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/06 20:07:57 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/10/22 17:34:04 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	value_of(char c)
+int	value_of(char c)
 {
 	if (ft_isdigit(c))
 		return (c - '0');
@@ -23,10 +23,10 @@ static int	value_of(char c)
 	return (0);
 }
 
-int		ft_atoi_base(const char *str, int base)
+int	ft_atoi_base(const char *str, int base)
 {
 	long	nb;
-	int	sign;
+	int		sign;
 
 	if (!str || base < 2 || base > 36)
 		return (0);

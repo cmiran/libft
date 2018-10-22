@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 18:57:28 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 19:36:14 by cmiran           ###   ########.fr       */
+/*   Updated: 2018/10/22 17:32:44 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 char	*ft_dupcstr(const char *s1, char c)
 {
-	char		*dest;
+	char	*dest;
 	size_t	i;
-	int			j;
+	int		j;
 
-	if (!(dest = ft_strnew(ft_strlen(s1) - (i = (ft_strclen(s1, c) + 1)))))
+	if (!(dest = ft_strnew(ft_strlen(s1)
+			- (i = (ft_strclen(s1, c) + 1)))))
 		return (NULL);
 	j = 0;
 	while (s1[i])
