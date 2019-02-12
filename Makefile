@@ -6,16 +6,19 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2018/09/28 23:17:22 by cmiran           ###   ########.fr        #
+#    Updated: 2019/02/12 13:41:18 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = libft.a
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-NAME = libft.a
+SRC_DIR= ./
+OBJ_DIR= ./
 
-SRC = ft_atoi.c\
+SRC_NAME = ft_atoi.c\
       ft_atoi_base.c\
       ft_bzero.c\
       ft_dupcstr.c\
@@ -110,7 +113,8 @@ SRC = ft_atoi.c\
       ft_toupper.c\
       get_next_line.c
 
-OBJ = $(SRC:.c=.o)
+SRC = $(addprefix $(SRC_DIR), $(SRC_NAME))
+OBJ = $(addprefix $(OBJ_DIR), $(SRC_NAME:.c=.o))
 
 all: $(NAME)
 
