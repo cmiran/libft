@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/02/12 13:41:18 by cmiran           ###   ########.fr        #
+#    Updated: 2019/03/22 17:00:08 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,7 +119,6 @@ OBJ = $(addprefix $(OBJ_DIR), $(SRC_NAME:.c=.o))
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	gcc -c $(CFLAGS) $(SRC)
 	ar rc $@ $^
 	ranlib $@
 
