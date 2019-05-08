@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/03/22 17:00:08 by cmiran           ###   ########.fr        #
+#    Updated: 2019/05/08 20:23:13 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,7 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-SRC_DIR= ./
-OBJ_DIR= ./
-
-SRC_NAME = ft_atoi.c\
+SRC = ft_atoi.c\
       ft_atoi_base.c\
       ft_bzero.c\
       ft_dupcstr.c\
@@ -113,23 +110,33 @@ SRC_NAME = ft_atoi.c\
       ft_toupper.c\
       get_next_line.c
 
-SRC = $(addprefix $(SRC_DIR), $(SRC_NAME))
-OBJ = $(addprefix $(OBJ_DIR), $(SRC_NAME:.c=.o))
+INC= $(addprefix -I, ./)
+
+OBJDIR= ./.obj/
+OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
+
 
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	ar rc $@ $^
-	ranlib $@
+	@echo "\033[0;32m  Creating library...\033[0m"
+	@ar rc $@ $^
+	@echo "\033[0;36m    Indexing library...\033[0m"
+	@ranlib $@
+	@ls | grep libft.a
 
-%.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $<
+$(OBJDIR)%.o: %.c
+	@mkdir -p $(OBJDIR)
+	@echo "\033[0;33m      Compiling:\033[0m" $<
+	@$(CC) $(CFLAGS) -o $@ -c $< $(INC)
 
 clean:
-	rm -f $(OBJ)
+	@echo "\033[0;31m    Deleting dependencies...\033[0m"
+	@rm -rf $(OBJ) $(OBJDIR)
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "\033[0;31m  Deleting library...\033[0m"
+	@rm -f $(NAME)
 
 re: fclean all
 
