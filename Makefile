@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/05/09 15:10:22 by cmiran           ###   ########.fr        #
+#    Updated: 2019/05/24 15:58:30 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC = ft_atoi.c\
       ft_islower.c\
       ft_islowhexa.c\
       ft_isprint.c\
+	  ft_issign.c\
       ft_isspace.c\
       ft_isupper.c\
       ft_isupphexa.c\

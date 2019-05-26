@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2018/10/22 17:31:25 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/05/24 15:59:20 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int				ft_isgraph(int c);
 int				ft_islower(int c);
 int				ft_islowhexa(int c);
 int				ft_isprint(int c);
+int				ft_issign(int c);
 int				ft_isspace(int c);
 int				ft_isupper(int c);
 int				ft_isupphexa(int c);
