@@ -6,23 +6,25 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2018/10/22 17:30:53 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/05 22:24:27 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_fd(char **list, const int *fd, char **tmp)
+static int	get_fd(char **list, const int fd)
 {
-	if (!(list[*fd]) && (!(list[*fd] = ft_strnew(BUFF_SIZE))))
+	char	*tmp;
+
+	if (!(list[fd]) && (!(list[fd] = ft_strnew(BUFF_SIZE))))
 		return (-1);
-	else if (ft_strchr(list[*fd], '\n') || ft_strchr(list[*fd], '\0'))
+	else if (ft_strchr(list[fd], '\n') || ft_strchr(list[fd], '\0'))
 	{
-		*tmp = list[*fd];
-		if (!(list[*fd] = ft_strsub(list[*fd], ft_strclen(list[*fd], '\n') + 1,
-						ft_strlen(list[*fd]) - ft_strclen(list[*fd], '\n'))))
+		tmp = list[fd];
+		if (!(list[fd] = ft_strsub(list[fd], ft_strclen(list[fd], '\n') + 1,
+						ft_strlen(list[fd]) - ft_strclen(list[fd], '\n'))))
 			return (-1);
-		ft_strdel(tmp);
+		ft_strdel(&tmp);
 	}
 	return (1);
 }
@@ -36,7 +38,7 @@ int			get_next_line(const int fd, char **line)
 
 	if (BUFF_SIZE < 1 || fd < 0 || line == NULL || read(fd, NULL, 0))
 		return (-1);
-	else if (!get_fd(list, &fd, &tmp))
+	else if (!get_fd(list, fd))
 		return (-1);
 	while ((ret = read(fd, buf, BUFF_SIZE)) > 0)
 	{
