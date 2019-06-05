@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/05 22:24:27 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/06 00:49:32 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 static int	get_fd(char **list, const int fd)
 {
 	char	*tmp;
+	int	len_to;
+	int	len;
 
 	if (!(list[fd]) && (!(list[fd] = ft_strnew(BUFF_SIZE))))
 		return (-1);
 	else if (ft_strchr(list[fd], '\n') || ft_strchr(list[fd], '\0'))
 	{
 		tmp = list[fd];
-		if (!(list[fd] = ft_strsub(list[fd], ft_strclen(list[fd], '\n') + 1,
-						ft_strlen(list[fd]) - ft_strclen(list[fd], '\n'))))
+		len_to = ft_strclen(list[fd], '\n');
+		len = ft_strlen(list[fd]) - len_to;
+		if (!(list[fd] = ft_strsub(list[fd], len_to + 1, len)))
 			return (-1);
 		ft_strdel(&tmp);
 	}
@@ -50,9 +53,10 @@ int			get_next_line(const int fd, char **line)
 		if (ft_strchr(buf, '\n'))
 			break ;
 	}
-	if (list[fd][0] == '\0')
-		return (0);
-	if (!(*line = ft_strcdup(list[fd], '\n')))
+	if (!list[fd][0] || !(*line = ft_strcdup(list[fd], '\n')))
+	{
+		free(list[fd]);
 		return (-1);
+	}
 	return (1);
 }
