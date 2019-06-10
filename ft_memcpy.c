@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 12:19:33 by cmiran            #+#    #+#             */
-/*   Updated: 2017/11/30 19:49:51 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/10 01:40:54 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char		*cdst;
-	const char	*csrc;
+	char		*tmp1;
+	const char	*tmp2;
 
 	if (dst == src)
 		return (dst);
-	cdst = (char *)dst;
-	csrc = (const char *)src;
+	tmp1 = (char *)dst;
+	tmp2 = (const char *)src;
 	while (n--)
-		*cdst++ = *csrc++;
+		*tmp1++ = *tmp2++;
 	return (dst);
 }

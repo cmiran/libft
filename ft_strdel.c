@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 17:08:01 by cmiran            #+#    #+#             */
-/*   Updated: 2018/09/05 15:35:05 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/10 02:39:51 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,22 @@
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_strdel(char **str)
 {
-	if (!as)
+//	int	len;
+	if (!str)
 		return ;
-	free(*as);
-	*as = NULL;
+//	printf("i'm in ft_strdel, this is str addr : %p\n", str);
+//	len = ft_strlen(*str);
+/*	while (len--)
+	{
+		free(str[len]);
+		str[len] = NULL;
+		printf("i'm in ft_strdel loop, this is *str addr : %p\n", *str);
+	}*/
+	free(*str);
+	*str = NULL;
+//	free(str);
+//	str = NULL;
+//	printf("i'm in ft_strdel, this is str addr : %p\n", str);
 }

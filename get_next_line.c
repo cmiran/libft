@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/06 01:42:25 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/10 12:31:46 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int			get_next_line(const int fd, char **line)
 	}
 	if (!list[fd][0] || !(*line = ft_strcdup(list[fd], '\n')))
 	{
-		free(list[fd]);
+		/*list[fd][0] ? */ft_strdel(&list[fd])/* : 0*/;
 		return (-1);
 	}
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/05/24 15:59:20 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/10 12:37:30 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <string.h>
 # include <unistd.h>
 
-# define BUFF_SIZE 42
+# define BUFF_SIZE 1
 
 typedef struct	s_list
 {
