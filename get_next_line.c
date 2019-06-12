@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/10 20:33:14 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/12 14:30:23 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static int	get_fd(char **list, const int fd)
 {
 	char	*tmp;
-	int	index;
-	int	len;
+	int		index;
+	int		len;
 
 	if (!(list[fd]) && (!(list[fd] = ft_strnew(BUFF_SIZE))))
 		return (0);
