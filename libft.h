@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/10 12:37:30 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/12 14:23:45 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void			ft_putstr_fd(const char *s, int fd);
 void			ft_puttab(const char **tab);
 void			ft_puttab_fd(const char **tab, int fd);
 int				ft_str_is_alpha(char *str);
+int				ft_str_is_blank(char *str);
 int				ft_str_is_lowercase(char *str);
 int				ft_str_is_numeric(char *str);
 int				ft_str_is_printable(char *str);
