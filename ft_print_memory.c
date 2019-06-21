@@ -1,99 +1,69 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_memory.c                                  :+:      :+:    :+:   */
+/*   print_memorytest2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jates- <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/29 14:15:37 by jates-            #+#    #+#             */
-/*   Updated: 2018/01/09 19:16:10 by cmiran           ###   ########.fr       */
+/*   Created: 2019/02/25 21:38:22 by maparmar          #+#    #+#             */
+/*   Updated: 2019/06/21 16:32:36 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define BASE "0123456789abcdef"
-#define BLANK NULL
-#include "libft.h"
+#include "unistd.h"
 
-static void		ft_putptr_base_hex(unsigned int i, int deci)
+void 	ft_print_hex(int x) // Hexadecimal value of int 
 {
-	if (deci > 0)
+	char *base = "0123456789abcdef";
+
+	write(1, &base[x / 16], 1);
+	write (1, &base[x % 16], 1);
+}
+
+
+void 	ft_putchar_memory(char c) // Ascii value of int
+{
+	if (c >= 32 && c <= 126) // printable Ascii
+		write(1, &c, 1);
+	else
+		write (1, ".", 1);
+}
+
+void	ft_print_memory(const void *addr, size_t size)
+{
+	size_t i = 0; // counter for size
+	size_t j; // counter for each 16 bytes
+
+	unsigned char const *p = addr;
+
+	while (i < size)
 	{
-		if (i / 16 != 0)
-			ft_putptr_base_hex(i / 16, deci - 1);
-		while (i / 16 == 0 && deci > 1)
+		j = 0;
+		while (j < 16 && i + j < size) // to print each Byte at a time. 
 		{
-			write(1, &(BASE[0]), 1);
-			deci--;
+			ft_print_hex(*(p + i + j));
+			if (j % 2)
+				write (1, " ", 1);
+			j++;
 		}
-		write(1, &(BASE[i % 16]), 1);
-	}
-}
-
-static void		ft_non_printable(unsigned char const *str, size_t nb)
-{
-	size_t i;
-
-	i = 0;
-	while (i < nb)
-	{
-		if (ft_isprint(str[i]))
-			write(1, str + i, 1);
-		else
-			write(1, ".", 1);
-		i++;
-	}
-}
-
-static void		ft_process(void const *ptr, unsigned char const *ligne, \
-							size_t nb)
-{
-	int		i;
-	int		k;
-	size_t	adres;
-
-	i = -1;
-	k = -1;
-	adres = (void const*)ptr - BLANK;
-	ft_putptr_base_hex((unsigned int)adres, 8);
-	write(1, ":", 1);
-	while (k++ < 40)
-	{
-		if (i++ + 1 < (int)nb)
+		while (j < 16) // to print the unitilized int's
 		{
-			if (i % 2 == 0)
-			{
-				write(1, " ", 1);
-				k++;
-			}
-			ft_putptr_base_hex((unsigned int)(ligne[i]), 2);
-			k++;
+			write (1, "  ", 2);
+			if (j % 2)
+				write (1, " ", 1);
+			j++;
 		}
-		else
-			write(1, " ", 1);
+		j = 0;
+		while (j < 16 && i + j < size) // to print the Ascii values of the given it
+		{
+			ft_putchar_memory(*(p + i + j));
+			j++;
+		}
+		write (1, "\n", 1);
+		i += 16;
 	}
-	ft_non_printable(ligne, nb);
 }
 
-void			*ft_print_memory(void const *addr, size_t size)
-{
-	unsigned char const		*tata;
 
-	tata = (unsigned char const *)addr;
-	if (!tata)
-	{
-		ft_putptr_base_hex((unsigned int)((void const*)tata - BLANK), 8);
-		write(1, "\n", 1);
-		return (0);
-	}
-	while ((int)size > 0)
-	{
-		if (!((int)size - 16 < 0))
-			ft_process(addr, tata, 16);
-		else
-			ft_process(addr, tata, size);
-		write(1, "\n", 1);
-		tata = tata + 16;
-		size -= 16;
-	}
-	return (0);
-}
+//#IMP Notes: 
+//The main concept of print memory is to print each byte at a time because memory in real is always store in the cpu in the token of bytes. 
