@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/06/22 20:23:48 by cmiran           ###   ########.fr        #
+#    Updated: 2019/06/22 20:27:12 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,8 +114,8 @@ SRC = ft_atoi.c\
 
 INC= $(addprefix -I, ./)
 
-OBJDIR= .obj/
-OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
+OBJDIR= .obj
+OBJ = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 
 all: $(NAME)
@@ -127,8 +127,10 @@ $(NAME) : $(OBJ)
 	@ranlib $@
 	@ls | grep libft.a
 
-$(OBJDIR)%.o: %.c
+$(OBJDIR):
 	@mkdir -p $(OBJDIR)
+
+$(OBJDIR)/%.o: %.c | $(OBJDIR)
 	@echo "\033[0;33m      Compiling\033[0m" $<
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INC)
 
@@ -137,7 +139,7 @@ clean:
 	@rm -rf $(OBJ) $(OBJDIR)
 
 fclean: clean
-	@echo "\033[0;31mDeleting\033[0m"	./libft/$(NAME)
+	@echo "\033[0;31mDeleting\033[0m"	libft/$(NAME)
 	@rm -f $(NAME)
 
 re: fclean all
