@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/06/22 20:27:12 by cmiran           ###   ########.fr        #
+#    Updated: 2019/06/22 20:27:49 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -135,7 +135,7 @@ $(OBJDIR)/%.o: %.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INC)
 
 clean:
-	@echo "\033[0;31mDeleting\033[0m"	./libft/$(OBJDIR)
+	@echo "\033[0;31mDeleting\033[0m"	libft/$(OBJDIR)
 	@rm -rf $(OBJ) $(OBJDIR)
 
 fclean: clean
