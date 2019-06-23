@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/22 18:55:01 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/22 18:34:13 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/23 23:57:18 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	get_fd(char **list, const int fd)
 
 int			get_next_line(const int fd, char **line)
 {
-	static char	*list[OPEN_MAX + 1];
+	static char	*list[OPEN_MAX];
 	int			ret;
 	char		buf[BUFF_SIZE + 1];
 	char		*tmp;
