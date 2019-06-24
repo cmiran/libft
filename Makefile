@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/06/22 20:27:49 by cmiran           ###   ########.fr        #
+#    Updated: 2019/06/24 11:15:58 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS = -Wall -Werror -Wextra
 SRC = ft_atoi.c\
       ft_atoi_base.c\
       ft_bzero.c\
+	  ft_count_set_bit.c\
       ft_dupcstr.c\
       ft_freentab.c\
       ft_freetab.c\
