@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/12 14:23:45 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/24 08:30:22 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@
 # include <unistd.h>
 
 # define BUFF_SIZE 1
+
+# define BIT_SET(a, b)	((a) |= (1ULL<<(b)))
+# define BIT_CLEAR(a, b)	((a) &= ~(1ULL<<(b)))
+# define BIT_FLIP(a, b)	((a) ^= (1ULL<<(b)))
+# define BIT_CHECK(a, b)	(!!((a) & (1ULL<<(b))))
 
 typedef struct	s_list
 {
