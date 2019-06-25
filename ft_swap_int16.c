@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_set_bit.c                                 :+:      :+:    :+:   */
+/*   ft_swap_int16.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/24 11:15:03 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/24 15:06:09 by cmiran           ###   ########.fr       */
+/*   Created: 2019/06/25 11:41:16 by cmiran            #+#    #+#             */
+/*   Updated: 2019/06/25 11:48:05 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_set_bit(size_t nbr)
+short	ft_swap_int16(short val)
 {
-	size_t	count;
-
-	count = 0;
-	while (nbr)
-	{
-		nbr &= (nbr - 1);
-		count++;
-	}
-	return (count);
+	return ((val << 8) | ((val >> 8) & 0xFF));
 }

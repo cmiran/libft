@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/06/24 11:15:58 by cmiran           ###   ########.fr        #
+#    Updated: 2019/06/25 11:45:34 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,6 +109,10 @@ SRC = ft_atoi.c\
       ft_strsub.c\
       ft_strtrim.c\
       ft_strupcase.c\
+	  ft_swap_int16.c\
+	  ft_swap_int32.c\
+	  ft_swap_uint16.c\
+	  ft_swap_uint32.c\
       ft_tolower.c\
       ft_toupper.c\
       get_next_line.c
