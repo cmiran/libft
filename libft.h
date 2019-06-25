@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/25 11:45:32 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/25 22:48:04 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
-void			ft_memdel(void **ap);
+void			ft_memdel(void *ap);
 void			*ft_memmove(void *dest, const void *src, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_print_memory(void const *addr, size_t size);
@@ -103,7 +103,7 @@ void			ft_strclr(char *s);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcnew(size_t size, char c);
 char			*ft_strcpy(char *dest, const char *src);
-void			ft_strdel(char **as);
+void			ft_strdel(char *str);
 char			*ft_strdup(const char *s1);
 int				ft_strequ(char const *s1, char const *s2);
 void			ft_striter(char *s, void (*f)(char *));
