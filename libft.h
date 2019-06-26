@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/25 22:48:04 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/26 15:27:03 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define BIT_CLEAR(a, b)	((a) &= ~(1ULL<<(b)))
 # define BIT_FLIP(a, b)		((a) ^= (1ULL<<(b)))
 # define BIT_CHECK(a, b)	(!!((a) & (1ULL<<(b))))
+# define IS_POWER_OF_TWO(n)	(n > 0 && !(n & (n - 1)))
 
 typedef struct	s_list
 {
