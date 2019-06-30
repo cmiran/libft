@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/06/26 00:28:49 by cmiran           ###   ########.fr        #
+#    Updated: 2019/06/30 22:37:04 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ SRC = ft_atoi.c\
       ft_putstr_fd.c\
       ft_puttab.c\
       ft_puttab_fd.c\
+	  ft_realloc.c\
       ft_str_is_alpha.c\
       ft_str_is_blank.c\
       ft_str_is_lowercase.c\

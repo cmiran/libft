@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/26 15:27:03 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/06/30 22:36:42 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <fcntl.h>
 # include <limits.h>
 # include <stdlib.h>
+# include <stdbool.h>
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
@@ -86,6 +87,7 @@ void			ft_putstr(const char *s);
 void			ft_putstr_fd(const char *s, int fd);
 void			ft_puttab(const char **tab);
 void			ft_puttab_fd(const char **tab, int fd);
+void			*ft_realloc(void *src, size_t size);
 int				ft_str_is_alpha(char *str);
 int				ft_str_is_blank(char *str);
 int				ft_str_is_lowercase(char *str);
