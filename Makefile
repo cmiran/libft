@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/06/30 22:37:04 by cmiran           ###   ########.fr        #
+#    Updated: 2019/07/08 05:58:10 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -116,7 +116,24 @@ SRC = ft_atoi.c\
 	  ft_swap_uint32.c\
       ft_tolower.c\
       ft_toupper.c\
-      get_next_line.c
+      get_next_line.c\
+	  ft_printf.c\
+	  ft_nbrlen.c\
+	  pf_atoi.c\
+	  pf_binarys.c\
+	  pf_conversions.c\
+	  pf_floats.c\
+	  pf_get_base.c\
+	  pf_nbrlen.c\
+	  pf_numbers.c\
+	  pf_putchar.c\
+	  pf_putnbr.c\
+	  pf_putnbr_base.c\
+	  pf_putnchar.c\
+	  pf_putnstr.c\
+	  pf_strchr.c\
+	  pf_strings.c\
+	  pf_unbrlen.c
 
 INC= $(addprefix -I, ./)
 
@@ -126,19 +143,19 @@ OBJ = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
+$(OBJDIR)/%.o: %.c | $(OBJDIR)
+	@echo "\033[0;33m      Compiling\033[0m" $<
+	@$(CC) $(CFLAGS) -o $@ -c $< $(INC)
+
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
+
 $(NAME) : $(OBJ)
 	@echo "\033[0;32m  Creating library...\033[0m"
 	@ar rc $@ $^
 	@echo "\033[0;36m    Indexing library...\033[0m"
 	@ranlib $@
 	@ls | grep libft.a
-
-$(OBJDIR):
-	@mkdir -p $(OBJDIR)
-
-$(OBJDIR)/%.o: %.c | $(OBJDIR)
-	@echo "\033[0;33m      Compiling\033[0m" $<
-	@$(CC) $(CFLAGS) -o $@ -c $< $(INC)
 
 clean:
 	@echo "\033[0;31mDeleting\033[0m"	libft/$(OBJDIR)

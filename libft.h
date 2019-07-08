@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/30 22:36:42 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/07/08 06:01:22 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,6 @@ uint32_t		ft_swap_uint32(uint32_t val);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				get_next_line(int fd, char **line);
+int				ft_printf(const char *format, ...);
 
 #endif
