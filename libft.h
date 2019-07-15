@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/07/14 17:28:21 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/07/15 11:08:54 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <ctype.h>
 # include <fcntl.h>
+# include <errno.h>
 # include <limits.h>
 # include <stdlib.h>
 # include <stdbool.h>
