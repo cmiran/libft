@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/07/08 05:58:10 by cmiran           ###   ########.fr        #
+#    Updated: 2019/07/15 17:44:33 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -143,7 +143,7 @@ OBJ = $(addprefix $(OBJDIR)/, $(SRC:.c=.o))
 
 all: $(NAME)
 
-$(OBJDIR)/%.o: %.c | $(OBJDIR)
+$(OBJDIR)/%.o: %.c libft.h | $(OBJDIR)
 	@echo "\033[0;33m      Compiling\033[0m" $<
 	@$(CC) $(CFLAGS) -o $@ -c $< $(INC)
 
