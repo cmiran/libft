@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/22 17:34:24 by cmiran            #+#    #+#             */
-/*   Updated: 2018/10/22 17:34:29 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/07/18 22:59:31 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa_base(int n, int base)
 	}
 	while (ft_pow(base, i) - 1 < n)
 		i++;
-	if (!(nbr = (char*)malloc(sizeof(nbr) * i)))
+	if (!(nbr = ft_memalloc(sizeof(char) * i)))
 		return (0);
 	nbr[i + neg] = '\0';
 	while (i-- > 0)

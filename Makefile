@@ -6,7 +6,7 @@
 #    By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/03 20:42:11 by cmiran            #+#    #+#              #
-#    Updated: 2019/07/15 17:44:33 by cmiran           ###   ########.fr        #
+#    Updated: 2019/07/18 23:01:14 by cmiran           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -157,6 +157,10 @@ $(NAME) : $(OBJ)
 	@ranlib $@
 	@ls | grep libft.a
 
+analyzer:
+	gcc -fsyntax-only $(CFLAGS) $(SRC)
+	gcc --analyze $(CFLAGS) $(SRC)
+
 clean:
 	@echo "\033[0;31mDeleting\033[0m"	libft/$(OBJDIR)
 	@rm -rf $(OBJ) $(OBJDIR)
@@ -167,4 +171,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re analyzer
