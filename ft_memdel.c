@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 16:27:23 by cmiran            #+#    #+#             */
-/*   Updated: 2019/06/25 22:47:51 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/07/19 15:14:27 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 
 #include "libft.h"
 
-void	ft_memdel(void *ap)
+void	ft_memdel(void **ap)
 {
-	if (!ap)
+	if (!*ap)
 		return ;
-	free(ap);
+	free(*ap);
+	*ap = NULL;
 }
