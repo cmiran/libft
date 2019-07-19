@@ -6,7 +6,7 @@
 /*   By: cmiran <cmiran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/30 12:05:30 by cmiran            #+#    #+#             */
-/*   Updated: 2019/07/08 05:35:10 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/07/19 11:23:57 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "ft_printf.h"
 
-void	check_sizeflag(const char *format, size_t *i, size_t *e)
+void		check_sizeflag(const char *format, size_t *i, size_t *e)
 {
 	if (format[*i] == 'h')
 		(e[91] = (format[*i + 1] == 'h')) ? ++*i : ++e['h'];
@@ -26,7 +26,7 @@ void	check_sizeflag(const char *format, size_t *i, size_t *e)
 		++e['L'];
 }
 
-int		parse(const char *format, size_t *i, size_t *e)
+int			parse(const char *format, size_t *i, size_t *e)
 {
 	while (format[++*i])
 	{
@@ -55,7 +55,7 @@ int		parse(const char *format, size_t *i, size_t *e)
 	return (pf_strchr("cspdiouxXfb", format[*i]));
 }
 
-void	pf_bzero(size_t *e, size_t len, t_conv *conv)
+void		pf_bzero(size_t *e, size_t len, t_conv *conv)
 {
 	while (len--)
 		*e++ = 0;
@@ -66,7 +66,7 @@ void	pf_bzero(size_t *e, size_t len, t_conv *conv)
 	conv->s = NULL;
 }
 
-void	init_env(t_env *var, t_fptr *f)
+static void	init_env(t_env *var, t_fptr *f)
 {
 	var->i = 0;
 	var->r = 0;
@@ -83,7 +83,7 @@ void	init_env(t_env *var, t_fptr *f)
 	f['b'] = &binarys;
 }
 
-int		ft_printf(const char *format, ...)
+int			ft_printf(const char *format, ...)
 {
 	t_env	var;
 	t_fptr	f[128];
