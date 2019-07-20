@@ -6,7 +6,7 @@
 /*   By: cmiran <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 08:40:10 by cmiran            #+#    #+#             */
-/*   Updated: 2019/07/19 15:59:59 by cmiran           ###   ########.fr       */
+/*   Updated: 2019/07/20 22:39:29 by cmiran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,7 +153,7 @@ char			*ft_strtrim(char const *s);
 char			*ft_strupcase(char *str);
 short			ft_swap_int16(short val);
 int32_t			ft_swap_int32(int32_t val);
-unsigned short 	ft_swap_uint16(unsigned short val);
+unsigned short	ft_swap_uint16(unsigned short val);
 uint32_t		ft_swap_uint32(uint32_t val);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
